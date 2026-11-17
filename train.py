@@ -27,14 +27,17 @@ class Network(nn.Module):
             self.encoder = {'GRU': nn.GRU, 'LSTM': nn.LSTM}[name](2, 32, batch_first=True)
         self.head = nn.Linear(32, 2)
 
-    def forward(self, x):
+    def encode(self, x):
         if self.name == 'MLP':
             encoded = self.encoder(x.flatten(1))
         elif self.name == '1D CNN':
             encoded = self.encoder(x.transpose(1, 2))[:, :, -1]
         else:
             encoded = self.encoder(x)[0][:, -1]
-        out = self.head(encoded)
+        return encoded
+
+    def forward(self, x):
+        out = self.head(self.encode(x))
         return out[:, 0], nn.functional.softplus(out[:, 1])
 
 def features(x, center, scale):
@@ -136,6 +139,8 @@ def run(cache, output, epochs, cap):
     for fold, train, val, test in splits(data):
         print(fold, flush=True)
         manifest.append(dict(protocol=fold, development=sorted(set(data['home'][train | val])),
+                             train=sorted(set(data['home'][train])),
+                             validation=sorted(set(data['home'][val])),
                              test=sorted(set(data['home'][test]))))
         for j, circuit in enumerate(APPLIANCES):
             watts = data['y'][:, j]
@@ -238,4 +243,5 @@ if __name__ == '__main__':
     torch.set_num_threads(2)
     with threadpool_limits(2):
         run(args.cache, args.output, args.epochs, args.cap)
+
 

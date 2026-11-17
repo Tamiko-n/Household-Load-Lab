@@ -28,12 +28,27 @@ def csv(name):
     path = RESULTS / name
     return read(path, path.stat().st_mtime_ns)
 
+def combined(base, hybrid):
+    original = csv(base)
+    if (RESULTS / hybrid).exists():
+        return pd.concat([original, csv(hybrid)], ignore_index=True)
+    return original
+
+def split_manifest():
+    return json.loads((RESULTS / 'splits.json').read_text(encoding='utf-8'))
+
 @st.cache_resource
 def fitted():
     import torch
 
     torch.set_num_threads(2)
     return torch.load(RESULTS / 'models.pt', weights_only=False, map_location='cpu')
+
+@st.cache_resource
+def fitted_hybrids():
+    import torch
+
+    return torch.load(RESULTS / 'hybrids.pt', weights_only=True, map_location='cpu')
 
 def predict(upload, circuit, model_name):
     import torch
@@ -49,6 +64,11 @@ def predict(upload, circuit, model_name):
         raise ValueError('Every row needs a valid household ID, timestamp and aggregate power.')
     data = data.sort_values(['dataid', 'localminute']).drop_duplicates(['dataid', 'localminute'])
     config = fitted()[circuit]
+    hybrid = None
+    if model_name.startswith('Hybrid:'):
+        from hybrids import infer
+
+        hybrid = fitted_hybrids()[circuit][model_name]
     frames = []
     for _, home in data.groupby('dataid'):
         if len(home) < WINDOW:
@@ -61,7 +81,9 @@ def predict(upload, circuit, model_name):
         windows = np.lib.stride_tricks.sliding_window_view(home.aggregate_kw.to_numpy('float32'), WINDOW)
         x = features(windows[contiguous], config['center'], config['scale'])
         chosen = home.iloc[np.flatnonzero(contiguous) + WINDOW - 1].copy()
-        if model_name in NEURAL or model_name == 'Neural ensemble':
+        if hybrid is not None:
+            score, kw = infer(config, x, model_name, hybrid)
+        elif model_name in NEURAL or model_name == 'Neural ensemble':
             outputs = []
             for name in NEURAL if model_name == 'Neural ensemble' else [model_name]:
                 weights, scale = config['models'][name]
@@ -77,7 +99,8 @@ def predict(upload, circuit, model_name):
             classifier, regressor = config['models'][model_name]
             flat = x.reshape(len(x), -1)
             score, kw = classifier.predict_proba(flat)[:, 1], regressor.predict(flat).clip(0)
-        chosen['predicted_on'] = score >= config['cutoffs'][model_name]
+        threshold = hybrid['cutoff'] if hybrid is not None else config['cutoffs'][model_name]
+        chosen['predicted_on'] = score >= threshold
         chosen['predicted_w'] = kw * 1000
         frames.append(chosen)
     if not frames:
@@ -88,8 +111,26 @@ if not (RESULTS / 'metrics.csv').exists():
     st.info('Run train.py to generate the benchmark and model files.')
     st.stop()
 
-data = csv('metrics.csv')
-comparison, transfer, upload = st.tabs(['Model comparison', 'Dataset shift', 'Evaluate new CSV'])
+data = combined('metrics.csv', 'hybrid_metrics.csv')
+households, comparison, transfer, upload = st.tabs(
+    ['Household splits', 'Model comparison', 'Dataset shift', 'Evaluate new CSV'])
+
+with households:
+    st.subheader('Training, validation and test households')
+    manifest = {fold['protocol']: fold for fold in split_manifest()}
+    split_protocol = st.selectbox('Benchmark protocol', list(manifest), key='household_protocol')
+    fold = manifest[split_protocol]
+    st.caption('Training and validation can contain the same household ID because they use earlier '
+               'and later readings, respectively. The test homes are excluded from both.')
+    groups = {'Training': fold['train'], 'Validation': fold['validation'], 'Testing': fold['test']}
+    panels = st.columns(3)
+    for panel, (name, ids) in zip(panels, groups.items()):
+        with panel:
+            st.metric(name, len(ids))
+            st.markdown(', '.join(ids))
+    rows = [{'Split': name, 'Household ID': home} for name, ids in groups.items() for home in ids]
+    st.download_button('Download household IDs', pd.DataFrame(rows).to_csv(index=False),
+                       'household-splits.csv', key='download_household_splits')
 with comparison:
     cols = st.columns(4)
     protocol = cols[0].selectbox('Test protocol', data.protocol.unique())
@@ -112,7 +153,7 @@ with comparison:
                + ('Meets minimum benchmark' if passed else 'Minimum benchmark unmet or undefined'))
     main, side = st.columns([2,1])
     with main:
-        st.subheader('Model leaderboard')
+        st.subheader(f'Model leaderboard · {len(pool)} models')
         keys = ['model','accuracy','balanced_accuracy','macro_f1','mae_w','rmse_w']
         st.dataframe(pool[keys], hide_index=True, width='stretch')
     with side:
@@ -120,7 +161,8 @@ with comparison:
         st.dataframe(pd.DataFrame([[row.tn,row.fp],[row.fn,row.tp]],
             columns=['Predicted OFF','Predicted ON'], index=['Actual OFF','Actual ON']))
     st.subheader('Measured and estimated power')
-    traces = csv('traces.csv.gz')
+    trace_file = 'hybrid_traces.csv.gz' if chosen.startswith('Hybrid:') else 'traces.csv.gz'
+    traces = csv(trace_file)
     trace = traces[(traces.protocol == protocol) & (traces.region == region)
                    & (traces.appliance == circuit) & (traces.model == chosen)]
     plot_home = st.selectbox('Plot household', trace.home.unique() if home == 'All homes' else [home])
@@ -132,7 +174,7 @@ with comparison:
         color=alt.Color('Series:N', scale=alt.Scale(domain=['Measured','Estimated'], range=['#281045','#a368f5'])),
         tooltip=['UTC:T','Series:N','Power (W):Q']).properties(height=320).interactive(), width='stretch')
     st.caption('The plot shows the sampled UTC day with the most measured appliance energy for this household.')
-    st.download_button('Download full benchmark CSV', (RESULTS/'metrics.csv').read_bytes(), 'metrics.csv')
+    st.download_button('Download full benchmark CSV', data.to_csv(index=False), 'metrics.csv')
 
 with transfer:
     st.subheader('How performance changes across regions')
@@ -141,6 +183,8 @@ with transfer:
     s1, s2 = st.columns(2)
     shift_appliance = s1.selectbox('Appliance', data.appliance.unique(), format_func=APPLIANCES.get, key='shift_appliance')
     shift_model = s2.selectbox('Model', data.model.unique(), key='shift_model')
+    if shift_model.startswith('Hybrid:'):
+        st.caption('Hybrid scores use the fixed-model unseen-household test across available regions.')
     shift = data[(data.home == 'All homes') & (data.appliance == shift_appliance) & (data.model == shift_model)].copy()
     shift['Protocol'] = np.where(shift.protocol == 'Unseen households', 'Unseen households', 'Unseen region')
     st.altair_chart(alt.Chart(shift).mark_bar().encode(x='region:N', xOffset='Protocol:N',
@@ -150,15 +194,17 @@ with transfer:
     st.caption('A missing bar means this test cohort has no usable labels for the selected appliance.')
     st.dataframe(shift[['region','Protocol','accuracy','balanced_accuracy','macro_f1','mae_w','rmse_w','on','off']],
                  hide_index=True, width='stretch')
-    with st.expander('Development and test household IDs'):
-        st.json(json.loads((RESULTS/'splits.json').read_text(encoding='utf-8')))
 
 with upload:
     st.subheader('Evaluate a new household')
     st.markdown('Upload a 1-minute CSV with **dataid**, **localminute**, and **aggregate_kw**. '
                 'Add the selected appliance circuit in kW to score the predictions.')
     appliance = st.selectbox('Appliance circuit', data.loc[data.protocol == 'Unseen households', 'appliance'].unique(), format_func=APPLIANCES.get)
-    model = st.selectbox('Model', ['Neural ensemble', *NEURAL, 'Gradient boosting', 'Linear'])
+    choices = ['Neural ensemble', *NEURAL, 'Gradient boosting', 'Linear']
+    if (RESULTS/'hybrids.pt').exists():
+        choices += list(data.loc[(data.appliance == appliance) &
+                                 data.model.str.startswith('Hybrid:'), 'model'].unique())
+    model = st.selectbox('Model', choices)
     file = st.file_uploader('Household CSV', type=['csv'])
     if file:
         try:
@@ -168,7 +214,7 @@ with upload:
             if appliance in prediction:
                 from train import metrics
 
-                manifest = json.loads((RESULTS/'splits.json').read_text(encoding='utf-8'))[0]
+                manifest = split_manifest()[0]
                 actual = pd.to_numeric(prediction[appliance], errors='coerce')
                 valid = np.isfinite(actual) & ~prediction.dataid.isin(manifest['development'])
                 if valid.any():

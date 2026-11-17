@@ -1,0 +1,199 @@
+protocol,appliance,model,epoch,validation_loss
+Unseen households,air1,Hybrid: MLP + 1D CNN,1,0.7285374999046326
+Unseen households,air1,Hybrid: MLP + 1D CNN,2,0.7317432165145874
+Unseen households,air1,Hybrid: MLP + 1D CNN,3,0.7194857597351074
+Unseen households,air1,Hybrid: MLP + 1D CNN,4,0.702024519443512
+Unseen households,air1,Hybrid: MLP + 1D CNN,5,0.7060796618461609
+Unseen households,air1,Hybrid: MLP + 1D CNN,6,0.7048948407173157
+Unseen households,air1,Hybrid: MLP + GRU,1,0.7230729460716248
+Unseen households,air1,Hybrid: MLP + GRU,2,0.7134682536125183
+Unseen households,air1,Hybrid: MLP + GRU,3,0.7099592685699463
+Unseen households,air1,Hybrid: MLP + GRU,4,0.6927178502082825
+Unseen households,air1,Hybrid: MLP + GRU,5,0.698783278465271
+Unseen households,air1,Hybrid: MLP + GRU,6,0.6895540356636047
+Unseen households,air1,Hybrid: MLP + LSTM,1,0.7357804775238037
+Unseen households,air1,Hybrid: MLP + LSTM,2,0.707958459854126
+Unseen households,air1,Hybrid: MLP + LSTM,3,0.7026275396347046
+Unseen households,air1,Hybrid: MLP + LSTM,4,0.7040079236030579
+Unseen households,air1,Hybrid: MLP + LSTM,5,0.7060448527336121
+Unseen households,air1,Hybrid: MLP + LSTM,6,0.7010369896888733
+Unseen households,air1,Hybrid: 1D CNN + GRU,1,0.7369884848594666
+Unseen households,air1,Hybrid: 1D CNN + GRU,2,0.7155117392539978
+Unseen households,air1,Hybrid: 1D CNN + GRU,3,0.7073047161102295
+Unseen households,air1,Hybrid: 1D CNN + GRU,4,0.7202795743942261
+Unseen households,air1,Hybrid: 1D CNN + GRU,5,0.7088452577590942
+Unseen households,air1,Hybrid: 1D CNN + GRU,6,0.7088194489479065
+Unseen households,air1,Hybrid: 1D CNN + LSTM,1,0.7281261086463928
+Unseen households,air1,Hybrid: 1D CNN + LSTM,2,0.71357661485672
+Unseen households,air1,Hybrid: 1D CNN + LSTM,3,0.7109161615371704
+Unseen households,air1,Hybrid: 1D CNN + LSTM,4,0.6965384483337402
+Unseen households,air1,Hybrid: 1D CNN + LSTM,5,0.7056925296783447
+Unseen households,air1,Hybrid: 1D CNN + LSTM,6,0.703311026096344
+Unseen households,air1,Hybrid: GRU + LSTM,1,0.7162020802497864
+Unseen households,air1,Hybrid: GRU + LSTM,2,0.6980219483375549
+Unseen households,air1,Hybrid: GRU + LSTM,3,0.7009108066558838
+Unseen households,air1,Hybrid: GRU + LSTM,4,0.7005059123039246
+Unseen households,air1,Hybrid: GRU + LSTM,5,0.6999586820602417
+Unseen households,air1,Hybrid: GRU + LSTM,6,0.7056151628494263
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU,1,0.7097252607345581
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU,2,0.7093956470489502
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU,3,0.6963734030723572
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU,4,0.6867513060569763
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU,5,0.6971471905708313
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU,6,0.6963135600090027
+Unseen households,air1,Hybrid: MLP + 1D CNN + LSTM,1,0.7347748279571533
+Unseen households,air1,Hybrid: MLP + 1D CNN + LSTM,2,0.7013885378837585
+Unseen households,air1,Hybrid: MLP + 1D CNN + LSTM,3,0.6917746067047119
+Unseen households,air1,Hybrid: MLP + 1D CNN + LSTM,4,0.7026875019073486
+Unseen households,air1,Hybrid: MLP + 1D CNN + LSTM,5,0.6997169256210327
+Unseen households,air1,Hybrid: MLP + 1D CNN + LSTM,6,0.6978800296783447
+Unseen households,air1,Hybrid: MLP + GRU + LSTM,1,0.7077172994613647
+Unseen households,air1,Hybrid: MLP + GRU + LSTM,2,0.6943378448486328
+Unseen households,air1,Hybrid: MLP + GRU + LSTM,3,0.6956421136856079
+Unseen households,air1,Hybrid: MLP + GRU + LSTM,4,0.6840851902961731
+Unseen households,air1,Hybrid: MLP + GRU + LSTM,5,0.689552903175354
+Unseen households,air1,Hybrid: MLP + GRU + LSTM,6,0.689136266708374
+Unseen households,air1,Hybrid: 1D CNN + GRU + LSTM,1,0.7110959887504578
+Unseen households,air1,Hybrid: 1D CNN + GRU + LSTM,2,0.7049726247787476
+Unseen households,air1,Hybrid: 1D CNN + GRU + LSTM,3,0.6976929306983948
+Unseen households,air1,Hybrid: 1D CNN + GRU + LSTM,4,0.7085922956466675
+Unseen households,air1,Hybrid: 1D CNN + GRU + LSTM,5,0.6939864158630371
+Unseen households,air1,Hybrid: 1D CNN + GRU + LSTM,6,0.6865732669830322
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU + LSTM,1,0.7112525701522827
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU + LSTM,2,0.690964937210083
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU + LSTM,3,0.6875240206718445
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU + LSTM,4,0.6827313303947449
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU + LSTM,5,0.6992911100387573
+Unseen households,air1,Hybrid: MLP + 1D CNN + GRU + LSTM,6,0.6848271489143372
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN,1,0.4805825650691986
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN,2,0.4781341552734375
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN,3,0.4786356985569
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN,4,0.4779249429702759
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN,5,0.4766491651535034
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN,6,0.4759846329689026
+Unseen households,refrigerator1,Hybrid: MLP + GRU,1,0.4787176847457886
+Unseen households,refrigerator1,Hybrid: MLP + GRU,2,0.47508755326271057
+Unseen households,refrigerator1,Hybrid: MLP + GRU,3,0.4742369055747986
+Unseen households,refrigerator1,Hybrid: MLP + GRU,4,0.4714743494987488
+Unseen households,refrigerator1,Hybrid: MLP + GRU,5,0.4692763686180115
+Unseen households,refrigerator1,Hybrid: MLP + GRU,6,0.4700087606906891
+Unseen households,refrigerator1,Hybrid: MLP + LSTM,1,0.47618043422698975
+Unseen households,refrigerator1,Hybrid: MLP + LSTM,2,0.4735640287399292
+Unseen households,refrigerator1,Hybrid: MLP + LSTM,3,0.4715587794780731
+Unseen households,refrigerator1,Hybrid: MLP + LSTM,4,0.47037437558174133
+Unseen households,refrigerator1,Hybrid: MLP + LSTM,5,0.4692690074443817
+Unseen households,refrigerator1,Hybrid: MLP + LSTM,6,0.46844521164894104
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU,1,0.49112895131111145
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU,2,0.4877997040748596
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU,3,0.4868069589138031
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU,4,0.4842574894428253
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU,5,0.48277029395103455
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU,6,0.4839910566806793
+Unseen households,refrigerator1,Hybrid: 1D CNN + LSTM,1,0.4858744740486145
+Unseen households,refrigerator1,Hybrid: 1D CNN + LSTM,2,0.481914222240448
+Unseen households,refrigerator1,Hybrid: 1D CNN + LSTM,3,0.48097488284111023
+Unseen households,refrigerator1,Hybrid: 1D CNN + LSTM,4,0.4796755313873291
+Unseen households,refrigerator1,Hybrid: 1D CNN + LSTM,5,0.47733157873153687
+Unseen households,refrigerator1,Hybrid: 1D CNN + LSTM,6,0.4781273901462555
+Unseen households,refrigerator1,Hybrid: GRU + LSTM,1,0.4866091012954712
+Unseen households,refrigerator1,Hybrid: GRU + LSTM,2,0.48276984691619873
+Unseen households,refrigerator1,Hybrid: GRU + LSTM,3,0.48210781812667847
+Unseen households,refrigerator1,Hybrid: GRU + LSTM,4,0.4788326025009155
+Unseen households,refrigerator1,Hybrid: GRU + LSTM,5,0.47696781158447266
+Unseen households,refrigerator1,Hybrid: GRU + LSTM,6,0.47610336542129517
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU,1,0.4769897758960724
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU,2,0.4758479595184326
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU,3,0.4720847010612488
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU,4,0.4703517258167267
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU,5,0.46925458312034607
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU,6,0.46778276562690735
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + LSTM,1,0.47482427954673767
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + LSTM,2,0.47275853157043457
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + LSTM,3,0.4717586040496826
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + LSTM,4,0.4692116677761078
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + LSTM,5,0.46901386976242065
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + LSTM,6,0.46978408098220825
+Unseen households,refrigerator1,Hybrid: MLP + GRU + LSTM,1,0.47524648904800415
+Unseen households,refrigerator1,Hybrid: MLP + GRU + LSTM,2,0.4720132648944855
+Unseen households,refrigerator1,Hybrid: MLP + GRU + LSTM,3,0.4698721170425415
+Unseen households,refrigerator1,Hybrid: MLP + GRU + LSTM,4,0.46834349632263184
+Unseen households,refrigerator1,Hybrid: MLP + GRU + LSTM,5,0.4683775007724762
+Unseen households,refrigerator1,Hybrid: MLP + GRU + LSTM,6,0.46828970313072205
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU + LSTM,1,0.4839059114456177
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU + LSTM,2,0.47869011759757996
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU + LSTM,3,0.477761447429657
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU + LSTM,4,0.4753461480140686
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU + LSTM,5,0.4743111729621887
+Unseen households,refrigerator1,Hybrid: 1D CNN + GRU + LSTM,6,0.4735223948955536
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU + LSTM,1,0.47415685653686523
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU + LSTM,2,0.4745803475379944
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU + LSTM,3,0.4679904580116272
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU + LSTM,4,0.46939098834991455
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU + LSTM,5,0.46896934509277344
+Unseen households,refrigerator1,Hybrid: MLP + 1D CNN + GRU + LSTM,6,0.4656863808631897
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN,1,0.6720331907272339
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN,2,0.6553414463996887
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN,3,0.6371699571609497
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN,4,0.6292118430137634
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN,5,0.6274279952049255
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN,6,0.6435661911964417
+Unseen households,dishwasher1,Hybrid: MLP + GRU,1,0.6528112292289734
+Unseen households,dishwasher1,Hybrid: MLP + GRU,2,0.6364296078681946
+Unseen households,dishwasher1,Hybrid: MLP + GRU,3,0.637047529220581
+Unseen households,dishwasher1,Hybrid: MLP + GRU,4,0.6379619836807251
+Unseen households,dishwasher1,Hybrid: MLP + GRU,5,0.6376616358757019
+Unseen households,dishwasher1,Hybrid: MLP + GRU,6,0.6209549307823181
+Unseen households,dishwasher1,Hybrid: MLP + LSTM,1,0.6609993577003479
+Unseen households,dishwasher1,Hybrid: MLP + LSTM,2,0.6487123370170593
+Unseen households,dishwasher1,Hybrid: MLP + LSTM,3,0.6612821817398071
+Unseen households,dishwasher1,Hybrid: MLP + LSTM,4,0.650803804397583
+Unseen households,dishwasher1,Hybrid: MLP + LSTM,5,0.6459648013114929
+Unseen households,dishwasher1,Hybrid: MLP + LSTM,6,0.639173150062561
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU,1,0.6631556153297424
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU,2,0.6388143301010132
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU,3,0.6337765455245972
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU,4,0.652305006980896
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU,5,0.620442271232605
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU,6,0.6249573826789856
+Unseen households,dishwasher1,Hybrid: 1D CNN + LSTM,1,0.6865506172180176
+Unseen households,dishwasher1,Hybrid: 1D CNN + LSTM,2,0.682874858379364
+Unseen households,dishwasher1,Hybrid: 1D CNN + LSTM,3,0.6754248142242432
+Unseen households,dishwasher1,Hybrid: 1D CNN + LSTM,4,0.6559880971908569
+Unseen households,dishwasher1,Hybrid: 1D CNN + LSTM,5,0.6591227054595947
+Unseen households,dishwasher1,Hybrid: 1D CNN + LSTM,6,0.6826501488685608
+Unseen households,dishwasher1,Hybrid: GRU + LSTM,1,0.6721243262290955
+Unseen households,dishwasher1,Hybrid: GRU + LSTM,2,0.6665998101234436
+Unseen households,dishwasher1,Hybrid: GRU + LSTM,3,0.6677518486976624
+Unseen households,dishwasher1,Hybrid: GRU + LSTM,4,0.6602978110313416
+Unseen households,dishwasher1,Hybrid: GRU + LSTM,5,0.6449697017669678
+Unseen households,dishwasher1,Hybrid: GRU + LSTM,6,0.651619017124176
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU,1,0.6407221555709839
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU,2,0.621117115020752
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU,3,0.6306345462799072
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU,4,0.6350617408752441
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU,5,0.6115283370018005
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU,6,0.6314473152160645
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + LSTM,1,0.6627838611602783
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + LSTM,2,0.6503385901451111
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + LSTM,3,0.6535786390304565
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + LSTM,4,0.6336957216262817
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + LSTM,5,0.6456820964813232
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + LSTM,6,0.609407365322113
+Unseen households,dishwasher1,Hybrid: MLP + GRU + LSTM,1,0.6428585648536682
+Unseen households,dishwasher1,Hybrid: MLP + GRU + LSTM,2,0.6314784288406372
+Unseen households,dishwasher1,Hybrid: MLP + GRU + LSTM,3,0.6269195079803467
+Unseen households,dishwasher1,Hybrid: MLP + GRU + LSTM,4,0.630307137966156
+Unseen households,dishwasher1,Hybrid: MLP + GRU + LSTM,5,0.6370589733123779
+Unseen households,dishwasher1,Hybrid: MLP + GRU + LSTM,6,0.6177011132240295
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU + LSTM,1,0.6573683023452759
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU + LSTM,2,0.6519379615783691
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU + LSTM,3,0.6561803817749023
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU + LSTM,4,0.6643097996711731
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU + LSTM,5,0.6247434020042419
+Unseen households,dishwasher1,Hybrid: 1D CNN + GRU + LSTM,6,0.6106076836585999
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU + LSTM,1,0.635545015335083
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU + LSTM,2,0.6229659914970398
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU + LSTM,3,0.6507923603057861
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU + LSTM,4,0.6348152160644531
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU + LSTM,5,0.6012353897094727
+Unseen households,dishwasher1,Hybrid: MLP + 1D CNN + GRU + LSTM,6,0.6088809967041016

@@ -79,3 +79,69 @@ The sampled high-activity days illustrate how both neural estimates follow air-c
 - Puerto Rico has no usable dishwasher labels. Its randomly held-out households also lack air-conditioner labels, so its air-conditioner comparison uses the full held-out-region protocol.
 
 The dashboard displays measured versus predicted power and the ON/OFF confusion matrix for each evaluated model. See [training_log.csv](results/training_log.csv) for per-epoch validation losses.
+
+## Feature-fusion hybrid comparison
+
+All 11 combinations concatenate frozen embeddings from the original neural encoders and train a joint ON/OFF and power head. The test households, windows, and state labels match the original unseen-household benchmark. Classification cutoffs and checkpoints are selected on development validation data.
+
+| Appliance | Model | Accuracy | Balanced accuracy | Macro F1 | MAE W | RMSE W |
+|---|---|---:|---:|---:|---:|---:|
+| Air conditioner | Gradient boosting | 89.7% | 88.7% | 0.831 | 133.0 | 412.7 |
+| Air conditioner | Hybrid: GRU + LSTM | 88.5% | 88.6% | 0.817 | 212.1 | 414.0 |
+| Air conditioner | Linear | 88.0% | 88.7% | 0.812 | 250.0 | 503.3 |
+| Air conditioner | Hybrid: MLP + GRU + LSTM | 87.6% | 88.3% | 0.807 | 169.0 | 424.5 |
+| Air conditioner | Hybrid: 1D CNN + GRU + LSTM | 87.2% | 88.2% | 0.803 | 168.0 | 433.2 |
+| Air conditioner | Hybrid: 1D CNN + GRU | 86.8% | 88.1% | 0.798 | 167.2 | 423.8 |
+| Air conditioner | Neural ensemble | 86.3% | 87.9% | 0.793 | 179.8 | 393.9 |
+| Air conditioner | Hybrid: MLP + 1D CNN + GRU + LSTM | 86.2% | 87.8% | 0.791 | 172.2 | 424.5 |
+| Air conditioner | 1D CNN | 85.8% | 87.7% | 0.788 | 153.9 | 381.8 |
+| Air conditioner | MLP | 85.5% | 87.5% | 0.785 | 150.6 | 414.7 |
+| Air conditioner | Hybrid: MLP + 1D CNN | 85.2% | 87.4% | 0.781 | 180.1 | 424.9 |
+| Air conditioner | Hybrid: MLP + 1D CNN + LSTM | 85.1% | 87.1% | 0.779 | 167.8 | 425.4 |
+| Air conditioner | Hybrid: MLP + GRU | 84.9% | 86.9% | 0.777 | 179.8 | 423.4 |
+| Air conditioner | Hybrid: MLP + LSTM | 84.9% | 86.9% | 0.777 | 167.6 | 433.0 |
+| Air conditioner | LSTM | 84.7% | 86.9% | 0.775 | 251.6 | 467.6 |
+| Air conditioner | Hybrid: 1D CNN + LSTM | 83.7% | 86.4% | 0.764 | 185.3 | 435.1 |
+| Air conditioner | Hybrid: MLP + 1D CNN + GRU | 83.1% | 86.2% | 0.758 | 170.6 | 423.6 |
+| Air conditioner | GRU | 82.8% | 86.0% | 0.755 | 186.7 | 429.8 |
+| Air conditioner | Always off | 84.4% | 50.0% | 0.458 | 312.2 | 885.7 |
+| Refrigerator | Gradient boosting | 72.4% | 69.7% | 0.700 | 48.9 | 70.5 |
+| Refrigerator | Hybrid: MLP + 1D CNN + GRU | 71.9% | 69.5% | 0.698 | 46.6 | 68.4 |
+| Refrigerator | Hybrid: MLP + GRU | 71.8% | 69.4% | 0.697 | 46.9 | 68.5 |
+| Refrigerator | Hybrid: MLP + 1D CNN + GRU + LSTM | 71.9% | 69.0% | 0.692 | 46.5 | 68.2 |
+| Refrigerator | Hybrid: MLP + GRU + LSTM | 71.7% | 68.8% | 0.690 | 45.9 | 68.4 |
+| Refrigerator | Hybrid: MLP + 1D CNN + LSTM | 71.6% | 68.8% | 0.690 | 46.6 | 68.4 |
+| Refrigerator | Hybrid: MLP + 1D CNN | 71.0% | 68.5% | 0.687 | 47.6 | 68.8 |
+| Refrigerator | Hybrid: 1D CNN + GRU + LSTM | 71.5% | 68.5% | 0.686 | 47.8 | 69.0 |
+| Refrigerator | Hybrid: MLP + LSTM | 71.5% | 68.4% | 0.686 | 46.9 | 68.6 |
+| Refrigerator | Neural ensemble | 70.8% | 68.1% | 0.682 | 49.8 | 69.3 |
+| Refrigerator | MLP | 70.7% | 67.9% | 0.681 | 48.8 | 69.2 |
+| Refrigerator | Hybrid: GRU + LSTM | 71.0% | 67.9% | 0.680 | 47.6 | 68.9 |
+| Refrigerator | Hybrid: 1D CNN + LSTM | 71.0% | 67.8% | 0.678 | 48.1 | 69.1 |
+| Refrigerator | Hybrid: 1D CNN + GRU | 70.4% | 67.1% | 0.671 | 47.9 | 69.1 |
+| Refrigerator | GRU | 69.9% | 67.0% | 0.671 | 49.0 | 69.5 |
+| Refrigerator | LSTM | 69.6% | 66.4% | 0.663 | 49.7 | 69.6 |
+| Refrigerator | Linear | 61.1% | 57.8% | 0.571 | 58.0 | 74.9 |
+| Refrigerator | 1D CNN | 64.6% | 59.5% | 0.568 | 53.2 | 71.9 |
+| Refrigerator | Always off | 42.4% | 50.0% | 0.298 | 71.0 | 103.7 |
+| Dishwasher | GRU | 82.0% | 58.7% | 0.578 | 37.7 | 104.5 |
+| Dishwasher | Gradient boosting | 84.5% | 57.1% | 0.575 | 21.7 | 95.4 |
+| Dishwasher | Hybrid: MLP + GRU + LSTM | 79.9% | 58.8% | 0.570 | 27.1 | 101.6 |
+| Dishwasher | Hybrid: MLP + 1D CNN + GRU | 79.1% | 58.9% | 0.567 | 29.3 | 100.3 |
+| Dishwasher | Hybrid: GRU + LSTM | 78.9% | 58.5% | 0.563 | 32.8 | 101.5 |
+| Dishwasher | Hybrid: MLP + 1D CNN + GRU + LSTM | 77.7% | 58.9% | 0.561 | 34.3 | 101.9 |
+| Dishwasher | Hybrid: MLP + GRU | 77.9% | 58.6% | 0.560 | 26.5 | 100.0 |
+| Dishwasher | LSTM | 75.7% | 59.8% | 0.558 | 37.5 | 105.5 |
+| Dishwasher | MLP | 76.6% | 58.2% | 0.552 | 30.8 | 104.3 |
+| Dishwasher | Hybrid: 1D CNN + GRU + LSTM | 75.6% | 58.7% | 0.551 | 29.5 | 101.3 |
+| Dishwasher | Neural ensemble | 73.4% | 60.2% | 0.550 | 32.6 | 103.0 |
+| Dishwasher | Hybrid: 1D CNN + GRU | 75.0% | 58.6% | 0.548 | 29.6 | 100.9 |
+| Dishwasher | Hybrid: MLP + LSTM | 74.9% | 58.3% | 0.546 | 29.2 | 101.3 |
+| Dishwasher | Hybrid: 1D CNN + LSTM | 72.1% | 60.2% | 0.544 | 32.1 | 101.7 |
+| Dishwasher | Hybrid: MLP + 1D CNN + LSTM | 72.0% | 59.3% | 0.539 | 27.1 | 101.6 |
+| Dishwasher | 1D CNN | 70.9% | 59.9% | 0.537 | 25.3 | 102.8 |
+| Dishwasher | Linear | 69.8% | 59.8% | 0.532 | 23.3 | 105.0 |
+| Dishwasher | Hybrid: MLP + 1D CNN | 69.5% | 59.3% | 0.528 | 30.2 | 101.9 |
+| Dishwasher | Always off | 89.1% | 50.0% | 0.471 | 16.2 | 106.7 |
+
+Regional and household scores are in [hybrid_metrics.csv](results/hybrid_metrics.csv). The regional holdout runs for the original eight approaches remain in the original benchmark.

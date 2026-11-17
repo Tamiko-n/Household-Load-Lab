@@ -36,3 +36,21 @@ Use Python 3.11 and the supplied regional directory layout. The bundled weights 
 
 The brief's minimum per-appliance classification targets are 85% accuracy, 75% balanced accuracy and 0.70 macro F1. The higher targets are 90%, 85% and 0.80. Scores can change with metering, appliance mix and regional behavior. The dataset-shift comparisons quantify that variation.
 
+
+## Household IDs and hybrid models
+
+The dashboard opens on **Household splits**. Pick a protocol to see the exact training, validation and test household IDs and download them as CSV. Training and validation can share household IDs because those partitions use different chronological windows. Test households are excluded from both.
+
+The fixed unseen-household benchmark compares 19 approaches wherever labels are available. It adds six two-encoder, four three-encoder, and one four-encoder hybrid. Each hybrid concatenates embeddings from frozen base models and learns a shared classification and power-estimation head. Its cutoff and best checkpoint come from validation. The four separate leave-region-out benchmarks retain the eight original approaches.
+
+After training the original models, reproduce the hybrids with:
+
+```powershell
+python hybrids.py --cache ../work/cache --output results
+```
+
+The hybrids have their own weights, metrics, traces and validation logs in `results`. The dashboard reads those files alongside the original results.
+
+## Update an existing GitHub deployment
+
+Extract this project's ZIP. Copy `app.py`, `train.py`, `hybrids.py`, and the updated `results` files into the GitHub checkout. Commit these files together and push to the branch linked to Streamlit Cloud.
