@@ -1,0 +1,281 @@
+protocol,appliance,model,epoch,validation_loss
+Unseen households,air1,MLP,1,0.7991452813148499
+Unseen households,air1,MLP,2,0.7529992461204529
+Unseen households,air1,MLP,3,0.7618719339370728
+Unseen households,air1,MLP,4,0.7403110265731812
+Unseen households,air1,MLP,5,0.7462260723114014
+Unseen households,air1,1D CNN,1,0.787854015827179
+Unseen households,air1,1D CNN,2,0.776840329170227
+Unseen households,air1,1D CNN,3,0.7633251547813416
+Unseen households,air1,1D CNN,4,0.7506422996520996
+Unseen households,air1,1D CNN,5,0.7592828273773193
+Unseen households,air1,GRU,1,0.8097817897796631
+Unseen households,air1,GRU,2,0.7635334730148315
+Unseen households,air1,GRU,3,0.8135620355606079
+Unseen households,air1,GRU,4,0.7292729020118713
+Unseen households,air1,GRU,5,0.7259061336517334
+Unseen households,air1,LSTM,1,0.787279486656189
+Unseen households,air1,LSTM,2,0.7596362829208374
+Unseen households,air1,LSTM,3,0.7562764883041382
+Unseen households,air1,LSTM,4,0.7597320675849915
+Unseen households,air1,LSTM,5,0.7134127616882324
+Unseen households,refrigerator1,MLP,1,0.5205732583999634
+Unseen households,refrigerator1,MLP,2,0.5006473064422607
+Unseen households,refrigerator1,MLP,3,0.49438586831092834
+Unseen households,refrigerator1,MLP,4,0.49245017766952515
+Unseen households,refrigerator1,MLP,5,0.49079039692878723
+Unseen households,refrigerator1,1D CNN,1,0.5471766591072083
+Unseen households,refrigerator1,1D CNN,2,0.5449571013450623
+Unseen households,refrigerator1,1D CNN,3,0.5424641370773315
+Unseen households,refrigerator1,1D CNN,4,0.5415191054344177
+Unseen households,refrigerator1,1D CNN,5,0.5401158928871155
+Unseen households,refrigerator1,GRU,1,0.5356137752532959
+Unseen households,refrigerator1,GRU,2,0.5240079164505005
+Unseen households,refrigerator1,GRU,3,0.5115206241607666
+Unseen households,refrigerator1,GRU,4,0.498088002204895
+Unseen households,refrigerator1,GRU,5,0.5003331303596497
+Unseen households,refrigerator1,LSTM,1,0.542629599571228
+Unseen households,refrigerator1,LSTM,2,0.5320591926574707
+Unseen households,refrigerator1,LSTM,3,0.5084919333457947
+Unseen households,refrigerator1,LSTM,4,0.501289427280426
+Unseen households,refrigerator1,LSTM,5,0.4928220510482788
+Unseen households,dishwasher1,MLP,1,0.7064284086227417
+Unseen households,dishwasher1,MLP,2,0.6717570424079895
+Unseen households,dishwasher1,MLP,3,0.647782564163208
+Unseen households,dishwasher1,MLP,4,0.6275919079780579
+Unseen households,dishwasher1,MLP,5,0.6467293500900269
+Unseen households,dishwasher1,1D CNN,1,0.6754447817802429
+Unseen households,dishwasher1,1D CNN,2,0.6767877340316772
+Unseen households,dishwasher1,1D CNN,3,0.6705358624458313
+Unseen households,dishwasher1,1D CNN,4,0.6625521183013916
+Unseen households,dishwasher1,1D CNN,5,0.6455103158950806
+Unseen households,dishwasher1,GRU,1,0.7399898171424866
+Unseen households,dishwasher1,GRU,2,0.6685881614685059
+Unseen households,dishwasher1,GRU,3,0.6655271649360657
+Unseen households,dishwasher1,GRU,4,0.6564382314682007
+Unseen households,dishwasher1,GRU,5,0.6475251913070679
+Unseen households,dishwasher1,LSTM,1,0.6894518733024597
+Unseen households,dishwasher1,LSTM,2,0.680213987827301
+Unseen households,dishwasher1,LSTM,3,0.6653506755828857
+Unseen households,dishwasher1,LSTM,4,0.6974973678588867
+Unseen households,dishwasher1,LSTM,5,0.6579107046127319
+Unseen region / Austin,air1,MLP,1,0.9364469051361084
+Unseen region / Austin,air1,MLP,2,0.8945945501327515
+Unseen region / Austin,air1,MLP,3,0.8543967604637146
+Unseen region / Austin,air1,MLP,4,0.8356212377548218
+Unseen region / Austin,air1,MLP,5,0.8111520409584045
+Unseen region / Austin,air1,1D CNN,1,0.9364129304885864
+Unseen region / Austin,air1,1D CNN,2,0.9195135235786438
+Unseen region / Austin,air1,1D CNN,3,0.8976759314537048
+Unseen region / Austin,air1,1D CNN,4,0.8905873894691467
+Unseen region / Austin,air1,1D CNN,5,0.8835642337799072
+Unseen region / Austin,air1,GRU,1,0.9280011057853699
+Unseen region / Austin,air1,GRU,2,0.8621748685836792
+Unseen region / Austin,air1,GRU,3,0.821772038936615
+Unseen region / Austin,air1,GRU,4,0.7996257543563843
+Unseen region / Austin,air1,GRU,5,0.7799853086471558
+Unseen region / Austin,air1,LSTM,1,0.9473568201065063
+Unseen region / Austin,air1,LSTM,2,0.8947283029556274
+Unseen region / Austin,air1,LSTM,3,0.8713926672935486
+Unseen region / Austin,air1,LSTM,4,0.8549495935440063
+Unseen region / Austin,air1,LSTM,5,0.8446550965309143
+Unseen region / Austin,refrigerator1,MLP,1,0.5909856557846069
+Unseen region / Austin,refrigerator1,MLP,2,0.5751489996910095
+Unseen region / Austin,refrigerator1,MLP,3,0.5711871385574341
+Unseen region / Austin,refrigerator1,MLP,4,0.568286120891571
+Unseen region / Austin,refrigerator1,MLP,5,0.5672151446342468
+Unseen region / Austin,refrigerator1,1D CNN,1,0.6267590522766113
+Unseen region / Austin,refrigerator1,1D CNN,2,0.6210325956344604
+Unseen region / Austin,refrigerator1,1D CNN,3,0.6202446222305298
+Unseen region / Austin,refrigerator1,1D CNN,4,0.6169721484184265
+Unseen region / Austin,refrigerator1,1D CNN,5,0.6155771017074585
+Unseen region / Austin,refrigerator1,GRU,1,0.6284675598144531
+Unseen region / Austin,refrigerator1,GRU,2,0.5903403759002686
+Unseen region / Austin,refrigerator1,GRU,3,0.5782545208930969
+Unseen region / Austin,refrigerator1,GRU,4,0.5647647380828857
+Unseen region / Austin,refrigerator1,GRU,5,0.5614635944366455
+Unseen region / Austin,refrigerator1,LSTM,1,0.6231937408447266
+Unseen region / Austin,refrigerator1,LSTM,2,0.613117516040802
+Unseen region / Austin,refrigerator1,LSTM,3,0.597499668598175
+Unseen region / Austin,refrigerator1,LSTM,4,0.5818143486976624
+Unseen region / Austin,refrigerator1,LSTM,5,0.5823888778686523
+Unseen region / Austin,dishwasher1,MLP,1,0.6148883700370789
+Unseen region / Austin,dishwasher1,MLP,2,0.6230230331420898
+Unseen region / Austin,dishwasher1,MLP,3,0.591894268989563
+Unseen region / Austin,dishwasher1,MLP,4,0.5907196402549744
+Unseen region / Austin,dishwasher1,MLP,5,0.5531136393547058
+Unseen region / Austin,dishwasher1,1D CNN,1,0.6237770318984985
+Unseen region / Austin,dishwasher1,1D CNN,2,0.6103101372718811
+Unseen region / Austin,dishwasher1,1D CNN,3,0.5882784128189087
+Unseen region / Austin,dishwasher1,1D CNN,4,0.5858165621757507
+Unseen region / Austin,dishwasher1,1D CNN,5,0.5579423308372498
+Unseen region / Austin,dishwasher1,GRU,1,0.6337946653366089
+Unseen region / Austin,dishwasher1,GRU,2,0.6311148405075073
+Unseen region / Austin,dishwasher1,GRU,3,0.6288319230079651
+Unseen region / Austin,dishwasher1,GRU,4,0.5962361693382263
+Unseen region / Austin,dishwasher1,GRU,5,0.5705262422561646
+Unseen region / Austin,dishwasher1,LSTM,1,0.6439836621284485
+Unseen region / Austin,dishwasher1,LSTM,2,0.6356197595596313
+Unseen region / Austin,dishwasher1,LSTM,3,0.629879355430603
+Unseen region / Austin,dishwasher1,LSTM,4,0.6145339608192444
+Unseen region / Austin,dishwasher1,LSTM,5,0.5894904136657715
+Unseen region / California,air1,MLP,1,0.7323450446128845
+Unseen region / California,air1,MLP,2,0.6949942111968994
+Unseen region / California,air1,MLP,3,0.7040314674377441
+Unseen region / California,air1,MLP,4,0.6914671659469604
+Unseen region / California,air1,MLP,5,0.6836061477661133
+Unseen region / California,air1,1D CNN,1,0.7057892680168152
+Unseen region / California,air1,1D CNN,2,0.6803663372993469
+Unseen region / California,air1,1D CNN,3,0.6709699630737305
+Unseen region / California,air1,1D CNN,4,0.6729748845100403
+Unseen region / California,air1,1D CNN,5,0.6706190705299377
+Unseen region / California,air1,GRU,1,0.7310143709182739
+Unseen region / California,air1,GRU,2,0.7123512625694275
+Unseen region / California,air1,GRU,3,0.7057881355285645
+Unseen region / California,air1,GRU,4,0.683815598487854
+Unseen region / California,air1,GRU,5,0.6695688366889954
+Unseen region / California,air1,LSTM,1,0.7217586040496826
+Unseen region / California,air1,LSTM,2,0.7000741958618164
+Unseen region / California,air1,LSTM,3,0.6839001774787903
+Unseen region / California,air1,LSTM,4,0.6832980513572693
+Unseen region / California,air1,LSTM,5,0.672427773475647
+Unseen region / California,refrigerator1,MLP,1,0.5284383893013
+Unseen region / California,refrigerator1,MLP,2,0.5068380832672119
+Unseen region / California,refrigerator1,MLP,3,0.49931392073631287
+Unseen region / California,refrigerator1,MLP,4,0.4923413097858429
+Unseen region / California,refrigerator1,MLP,5,0.49108412861824036
+Unseen region / California,refrigerator1,1D CNN,1,0.5460089445114136
+Unseen region / California,refrigerator1,1D CNN,2,0.5450689792633057
+Unseen region / California,refrigerator1,1D CNN,3,0.5434622764587402
+Unseen region / California,refrigerator1,1D CNN,4,0.5417964458465576
+Unseen region / California,refrigerator1,1D CNN,5,0.541480302810669
+Unseen region / California,refrigerator1,GRU,1,0.552875280380249
+Unseen region / California,refrigerator1,GRU,2,0.5280244946479797
+Unseen region / California,refrigerator1,GRU,3,0.5021672248840332
+Unseen region / California,refrigerator1,GRU,4,0.49814924597740173
+Unseen region / California,refrigerator1,GRU,5,0.4969082176685333
+Unseen region / California,refrigerator1,LSTM,1,0.5472437739372253
+Unseen region / California,refrigerator1,LSTM,2,0.5314948558807373
+Unseen region / California,refrigerator1,LSTM,3,0.5240552425384521
+Unseen region / California,refrigerator1,LSTM,4,0.5091610550880432
+Unseen region / California,refrigerator1,LSTM,5,0.5165000557899475
+Unseen region / California,dishwasher1,MLP,1,1.2860966920852661
+Unseen region / California,dishwasher1,MLP,2,1.2982828617095947
+Unseen region / California,dishwasher1,MLP,3,1.2934238910675049
+Unseen region / California,dishwasher1,MLP,4,1.2607479095458984
+Unseen region / California,dishwasher1,MLP,5,1.2511478662490845
+Unseen region / California,dishwasher1,1D CNN,1,1.2869279384613037
+Unseen region / California,dishwasher1,1D CNN,2,1.272840976715088
+Unseen region / California,dishwasher1,1D CNN,3,1.2754381895065308
+Unseen region / California,dishwasher1,1D CNN,4,1.261355996131897
+Unseen region / California,dishwasher1,1D CNN,5,1.2595266103744507
+Unseen region / California,dishwasher1,GRU,1,1.2977982759475708
+Unseen region / California,dishwasher1,GRU,2,1.2720099687576294
+Unseen region / California,dishwasher1,GRU,3,1.296554684638977
+Unseen region / California,dishwasher1,GRU,4,1.2819899320602417
+Unseen region / California,dishwasher1,GRU,5,1.2733135223388672
+Unseen region / California,dishwasher1,LSTM,1,1.2777085304260254
+Unseen region / California,dishwasher1,LSTM,2,1.2728227376937866
+Unseen region / California,dishwasher1,LSTM,3,1.2804105281829834
+Unseen region / California,dishwasher1,LSTM,4,1.271083116531372
+Unseen region / California,dishwasher1,LSTM,5,1.295186996459961
+Unseen region / New York,air1,MLP,1,0.39459097385406494
+Unseen region / New York,air1,MLP,2,0.3818264603614807
+Unseen region / New York,air1,MLP,3,0.38328543305397034
+Unseen region / New York,air1,MLP,4,0.3812504708766937
+Unseen region / New York,air1,MLP,5,0.3837060034275055
+Unseen region / New York,air1,1D CNN,1,0.397675484418869
+Unseen region / New York,air1,1D CNN,2,0.3866480886936188
+Unseen region / New York,air1,1D CNN,3,0.3857276737689972
+Unseen region / New York,air1,1D CNN,4,0.37290558218955994
+Unseen region / New York,air1,1D CNN,5,0.36607635021209717
+Unseen region / New York,air1,GRU,1,0.44904807209968567
+Unseen region / New York,air1,GRU,2,0.3809332549571991
+Unseen region / New York,air1,GRU,3,0.35943448543548584
+Unseen region / New York,air1,GRU,4,0.3426295816898346
+Unseen region / New York,air1,GRU,5,0.35397085547447205
+Unseen region / New York,air1,LSTM,1,0.42084959149360657
+Unseen region / New York,air1,LSTM,2,0.40399256348609924
+Unseen region / New York,air1,LSTM,3,0.37325388193130493
+Unseen region / New York,air1,LSTM,4,0.39116349816322327
+Unseen region / New York,air1,LSTM,5,0.35189542174339294
+Unseen region / New York,refrigerator1,MLP,1,0.5053566098213196
+Unseen region / New York,refrigerator1,MLP,2,0.48358383774757385
+Unseen region / New York,refrigerator1,MLP,3,0.48443925380706787
+Unseen region / New York,refrigerator1,MLP,4,0.4731309711933136
+Unseen region / New York,refrigerator1,MLP,5,0.4710851311683655
+Unseen region / New York,refrigerator1,1D CNN,1,0.5427349209785461
+Unseen region / New York,refrigerator1,1D CNN,2,0.5392212271690369
+Unseen region / New York,refrigerator1,1D CNN,3,0.5369747877120972
+Unseen region / New York,refrigerator1,1D CNN,4,0.5370407700538635
+Unseen region / New York,refrigerator1,1D CNN,5,0.5338470339775085
+Unseen region / New York,refrigerator1,GRU,1,0.5318722724914551
+Unseen region / New York,refrigerator1,GRU,2,0.5080273151397705
+Unseen region / New York,refrigerator1,GRU,3,0.4879026710987091
+Unseen region / New York,refrigerator1,GRU,4,0.476841539144516
+Unseen region / New York,refrigerator1,GRU,5,0.47228097915649414
+Unseen region / New York,refrigerator1,LSTM,1,0.5400153398513794
+Unseen region / New York,refrigerator1,LSTM,2,0.5171816945075989
+Unseen region / New York,refrigerator1,LSTM,3,0.5026598572731018
+Unseen region / New York,refrigerator1,LSTM,4,0.4919959306716919
+Unseen region / New York,refrigerator1,LSTM,5,0.4815633296966553
+Unseen region / New York,dishwasher1,MLP,1,1.0440030097961426
+Unseen region / New York,dishwasher1,MLP,2,1.0237164497375488
+Unseen region / New York,dishwasher1,MLP,3,1.0115983486175537
+Unseen region / New York,dishwasher1,MLP,4,0.9825519919395447
+Unseen region / New York,dishwasher1,MLP,5,0.9914290904998779
+Unseen region / New York,dishwasher1,1D CNN,1,1.0207029581069946
+Unseen region / New York,dishwasher1,1D CNN,2,1.0058361291885376
+Unseen region / New York,dishwasher1,1D CNN,3,1.0280544757843018
+Unseen region / New York,dishwasher1,1D CNN,4,0.9976839423179626
+Unseen region / New York,dishwasher1,1D CNN,5,0.9968405961990356
+Unseen region / New York,dishwasher1,GRU,1,1.031901240348816
+Unseen region / New York,dishwasher1,GRU,2,0.9890409111976624
+Unseen region / New York,dishwasher1,GRU,3,1.0053380727767944
+Unseen region / New York,dishwasher1,GRU,4,0.9907872080802917
+Unseen region / New York,dishwasher1,GRU,5,0.984325647354126
+Unseen region / New York,dishwasher1,LSTM,1,1.0160986185073853
+Unseen region / New York,dishwasher1,LSTM,2,1.0316754579544067
+Unseen region / New York,dishwasher1,LSTM,3,0.9940334558486938
+Unseen region / New York,dishwasher1,LSTM,4,0.9961833357810974
+Unseen region / New York,dishwasher1,LSTM,5,1.0240657329559326
+Unseen region / Puerto Rico,air1,MLP,1,0.6785956025123596
+Unseen region / Puerto Rico,air1,MLP,2,0.6915894150733948
+Unseen region / Puerto Rico,air1,MLP,3,0.6538721919059753
+Unseen region / Puerto Rico,air1,MLP,4,0.6622827053070068
+Unseen region / Puerto Rico,air1,MLP,5,0.6567405462265015
+Unseen region / Puerto Rico,air1,1D CNN,1,0.706920325756073
+Unseen region / Puerto Rico,air1,1D CNN,2,0.6805363297462463
+Unseen region / Puerto Rico,air1,1D CNN,3,0.6905101537704468
+Unseen region / Puerto Rico,air1,1D CNN,4,0.6901980042457581
+Unseen region / Puerto Rico,air1,1D CNN,5,0.6830558776855469
+Unseen region / Puerto Rico,air1,GRU,1,0.6973814964294434
+Unseen region / Puerto Rico,air1,GRU,2,0.6696801781654358
+Unseen region / Puerto Rico,air1,GRU,3,0.6678918600082397
+Unseen region / Puerto Rico,air1,GRU,4,0.6648746132850647
+Unseen region / Puerto Rico,air1,GRU,5,0.6599430441856384
+Unseen region / Puerto Rico,air1,LSTM,1,0.691216230392456
+Unseen region / Puerto Rico,air1,LSTM,2,0.7052119970321655
+Unseen region / Puerto Rico,air1,LSTM,3,0.6555866599082947
+Unseen region / Puerto Rico,air1,LSTM,4,0.6815613508224487
+Unseen region / Puerto Rico,air1,LSTM,5,0.6571803689002991
+Unseen region / Puerto Rico,refrigerator1,MLP,1,0.5445213317871094
+Unseen region / Puerto Rico,refrigerator1,MLP,2,0.5329411029815674
+Unseen region / Puerto Rico,refrigerator1,MLP,3,0.5207973718643188
+Unseen region / Puerto Rico,refrigerator1,MLP,4,0.5250046253204346
+Unseen region / Puerto Rico,refrigerator1,MLP,5,0.515617847442627
+Unseen region / Puerto Rico,refrigerator1,1D CNN,1,0.5767495632171631
+Unseen region / Puerto Rico,refrigerator1,1D CNN,2,0.5726391077041626
+Unseen region / Puerto Rico,refrigerator1,1D CNN,3,0.5697160363197327
+Unseen region / Puerto Rico,refrigerator1,1D CNN,4,0.5693125128746033
+Unseen region / Puerto Rico,refrigerator1,1D CNN,5,0.5697992444038391
+Unseen region / Puerto Rico,refrigerator1,GRU,1,0.5662800669670105
+Unseen region / Puerto Rico,refrigerator1,GRU,2,0.5335979461669922
+Unseen region / Puerto Rico,refrigerator1,GRU,3,0.5210957527160645
+Unseen region / Puerto Rico,refrigerator1,GRU,4,0.5128980875015259
+Unseen region / Puerto Rico,refrigerator1,GRU,5,0.5125427842140198
+Unseen region / Puerto Rico,refrigerator1,LSTM,1,0.5889687538146973
+Unseen region / Puerto Rico,refrigerator1,LSTM,2,0.5584214329719543
+Unseen region / Puerto Rico,refrigerator1,LSTM,3,0.5346325039863586
+Unseen region / Puerto Rico,refrigerator1,LSTM,4,0.5218256115913391
+Unseen region / Puerto Rico,refrigerator1,LSTM,5,0.5162844657897949
