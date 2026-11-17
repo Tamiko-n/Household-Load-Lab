@@ -139,8 +139,8 @@ with transfer:
     st.caption('Unseen households uses one fixed model per appliance across all test regions. '
                'Unseen region excludes every household from the named region during development.')
     s1, s2 = st.columns(2)
-    shift_appliance = s1.selectbox('Appliance', data.appliance.unique(), format_func=APPLIANCES.get, key='shift')
-    shift_model = s2.selectbox('Model', data.model.unique(), key='shift')
+    shift_appliance = s1.selectbox('Appliance', data.appliance.unique(), format_func=APPLIANCES.get, key='shift_appliance')
+    shift_model = s2.selectbox('Model', data.model.unique(), key='shift_model')
     shift = data[(data.home == 'All homes') & (data.appliance == shift_appliance) & (data.model == shift_model)].copy()
     shift['Protocol'] = np.where(shift.protocol == 'Unseen households', 'Unseen households', 'Unseen region')
     st.altair_chart(alt.Chart(shift).mark_bar().encode(x='region:N', xOffset='Protocol:N',
